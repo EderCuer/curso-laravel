@@ -15,6 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello/{name?}', function($name = 'Eder'){
-	return 'Hello ' . $name;
-});
+Route::get('/hello/{name?}', 'HelloController@index');
