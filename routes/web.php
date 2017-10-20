@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello/world', function(){
-	return 'Hello world';
+Route::get('/hello/{name?}', function($name = 'Eder'){
+	return 'Hello ' . $name;
 });
