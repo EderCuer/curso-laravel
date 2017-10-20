@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello/{name?}', 'HelloController@index');
+Route::get('/hello/{name?}', 'HelloController@index')->name('hello.index');
 Route::post('/hello/{name?}', 'HelloController@render');
 Route::resource('pages', 'Admin\PagesController');
