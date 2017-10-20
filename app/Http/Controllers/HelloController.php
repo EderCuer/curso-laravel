@@ -9,6 +9,11 @@ class HelloController extends Controller
     
     public function index($name = 'world')
     {
-    	return 'Hello ' . $name;
+    	return view('hello', ['n' => $name]);
+    }
+
+    public function render(Request $request)
+    {
+    	return 'Hello '. $request->input('name');
     }
 }
